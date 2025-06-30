@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Math&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+    font-family: "Libertinus Math", system-ui;
+}
+.candiate-details-container>*:not(:last-child) {
+    border-bottom: 1px solid black;
+}
+.candiate-details-container>* :first-child {
+    border-right: 1px solid black;
+}
+.bg-orange {
+    background-color: #ff8800;
+}
+.candiate-details-container,
+.candiate-marks-container {
+    box-shadow: 3px 10px 20px rgba(0, 0, 0, 0.527);
+}
+.candiate-marks-container {
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.card {
+    border: none;
+}
+.card input,
+button {
+    outline: none;
+    border: none;
+}
+.bg-orange {
+    background-color: orangered;
+}
+.subject,
+.candiateMarksContainer>* {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.444);
+}
+.metric,
+.metric-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.student-performance-header,
+.candiate-mark-each-subjects-container>*:not(:last-child) {
+    border-bottom: 2px solid rgb(165, 164, 164);
+}
+.candiate-overall-marks-container>* {
+    border-top: 2px solid rgb(165, 164, 164);
+}
+.subject-title,
+.metrics-row>*:not(:last-child) {
+    border-right: 1px solid black;
+}
+.subject-title,
+.metrics-row>* {
+    padding: 1rem;
+    font-weight: bold;
+}
+.subject-name,
+.metrics-values>*:not(:last-child) {
+    border-right: 1px solid black;
+}
+#data-loading-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    width: 0%;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    z-index: 9999;
+    transition: width 0.3s ease;
+}
+/* Media queries starts from here */
+@media screen and (max-width: 992px) {
+
+    .metrics-row,
+    .subject-name {
+        font-size: .8rem !important;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .candiate-details-container>* :first-child {
+        border-right: none !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .candiate-marks-container {
+        background-color: orangered !important;
+    }
+}
+/* media queries ends here */

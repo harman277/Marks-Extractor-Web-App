@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marks Extractor Web App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+    <div id="data-loading-bar"></div>
+    <main class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class=" mt-3 fw-bold text-center">Combined Graduate Level Examination Tier 1 Rank & Marks</h2>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10 col-sm-10 col-10 mt-3 card">
+                <div class="row g-2 align-items-center ">
+                    <div class="col-lg-11 col-md-10 col-sm-10 col-10">
+                        <input type="text" class="form-control w-100" placeholder="Enter URL to fetch details"
+                            id="fetch-url-input">
+                    </div>
+                    <div class="col-lg-1 col-md-2 col-sm-2 col-2 ">
+                        <button class="btn btn-outline-dark w-100" onclick="fetchResultData()">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row justify-content-center mt-3">
+            <div class="col-lg-8 col-md-11 col-sm-11 col-11 candiate-details-container d-none"></div>
+            <p class="error-message text-center text-danger d-none"></p>
+        </div>
+
+        <div class="row justify-content-center mt-3 ">
+            <div class="col-lg-10 col-md-12 candiate-marks-container d-none">
+
+                <div class="row bg-orange text-light text-center py-3">
+                    <div class=" col-sm-12  col-lg-8 col-md-8  d-flex align-items-center justify-content-center">
+                        <h4 class="fw-bold">Marks Obtained in Each Subject</h4>
+                    </div>
+                    <div class="col-sm-6 col-lg-2 col-md-2 col-6 d-flex align-items-center">
+                        <button class="w-100 h-100 fw-bold" onclick="exportToCSV()">Export to csv</button>
+                    </div>
+                    <div class=" col-sm-6 col-lg-2 col-md-2 col-6  d-flex align-items-center">
+                        <select class="form-select fw-bold" id="filters" onchange="updateAnalysisView()">
+                            <option value="marks" selected>Marks</option>
+                            <option value="rightAnswer">Right</option>
+                            <option value="wrongAnswer">Wrong</option>
+                            <option value="attempt">Attempt</option>
+                            <option value="unattempt">Not Attempt</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row student-performance-header">
+                    <div class="col-12">
+                        <div class="row performance-header-row">
+
+                            <div class="col-5 subject-title">
+                                Subject
+                            </div>
+
+                            <div class="col-7 metrics-header">
+                                <div class="row metrics-row">
+                                    <div class="col-3 metric-title attempt-title ">Attempt</div>
+                                    <div class="col-3 metric-title not-attempt-title">Not Attempt</div>
+                                    <div class="col-2 metric-title right-title">Right</div>
+                                    <div class="col-2 metric-title wrong-title ">Wrong</div>
+                                    <div class="col-2 metric-title marks-title ">Marks</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="candiate-mark-each-subjects-container"></div>
+
+                <div class="candiate-overall-marks-container"></div>
+            </div>
+        </div>
+
+        </div>
+    </main>
+    <script src="/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
