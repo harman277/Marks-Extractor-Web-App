@@ -69,7 +69,9 @@ This section outlines the core logic and flow of how the **Extractor Web App** p
 > - HTML, CSS, JavaScript
 
 🌐 Hosting Information
-✅ The website is fully hosted on Vercel: https://marks-extractor-web-3zirs8e3g-harmans-projects-5a44066f.vercel.app/
+✅ The website is fully hosted on Vercel: 
+https://marks-extractor-web-3zirs8e3g-harmans-projects-5a44066f.vercel.app/
+
 ⚠️ However, Vercel's free plan has a 10-second execution timeout for backend/serverless functions. Since Cheerio-based scraping can take 10–30 seconds, the backend may not work properly on Vercel. This means candidate data may fail to load or timeout on the hosted version.
 
 
