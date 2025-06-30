@@ -66,4 +66,26 @@ This section outlines the core logic and flow of how the **Extractor Web App** p
 > - Express.js  
 > - Cheerio  
 > - Bootstrap 5.3  
-> - HTML, CSS, JavaScript  
+> - HTML, CSS, JavaScript
+
+🌐 Hosting Information
+✅ The website is fully hosted on Vercel: https://marks-extractor-web-3zirs8e3g-harmans-projects-5a44066f.vercel.app/
+⚠️ However, Vercel's free plan has a 10-second execution timeout for backend/serverless functions. Since Cheerio-based scraping can take 10–30 seconds, the backend may not work properly on Vercel. This means candidate data may fail to load or timeout on the hosted version.
+
+
+🖥️ How to Run the Project Locally
+To run the project on your own machine (where there are no timeout limits), follow these steps:
+
+Download or clone the project from GitHub.
+
+Open a terminal inside the project folder and run:
+
+npm install
+This will install all required dependencies.
+
+Start the development server:
+
+npm run dev
+Open your browser and visit:
+
+http://localhost:5000
